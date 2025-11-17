@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?q=80&w=2070');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,8 +15,8 @@
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0.3) 100%
+    rgba(0, 128, 0, 0.5) 0%,
+    rgba(0, 128, 0, 0.3) 100%
   );
   z-index: 1;
 }
@@ -54,7 +53,7 @@
 }
 
 .title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
   line-height: 1.2;
   color: #fff;
@@ -75,8 +74,8 @@
 .cta {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background: #fff;
-  color: #1a1a1a;
+  background: #10b981;
+  color: #ffffff;
   font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
@@ -89,13 +88,14 @@
 .cta:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
-  background: #f8f8f8;
+  background: #059669;
 }
 
 .cta:active {
   transform: translateY(0);
 }
 
+/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -116,7 +116,8 @@
   }
 }
 
-@media (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 1024px) {
   .hero {
     min-height: 500px;
   }
@@ -144,17 +145,53 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .hero {
     min-height: 450px;
   }
 
-  .container {
-    padding: 1rem;
+  .content {
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+
+  .subtitle {
+    font-size: clamp(0.875rem, 2.5vw, 1.125rem);
   }
 
   .cta {
     padding: 0.75rem 1.75rem;
     font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 400px;
+  }
+
+  .content {
+    max-width: 95%;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.9rem;
+  }
+
+  .title {
+    font-size: clamp(1.25rem, 7vw, 2rem);
+  }
+
+  .subtitle {
+    font-size: clamp(0.75rem, 3vw, 1rem);
+  }
+
+  .cta {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.8125rem;
   }
 }

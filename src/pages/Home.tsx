@@ -12,7 +12,7 @@ import ServiceGrid from "../services/ServicesGrid";
 import ProductCarousel from "../pages/ProductCarousel";
 import DiscountCards from "../services/DiscountCards";
 import Shop from "../components/Shop";
-import GetStarted from "../services/GetStarted";
+
 
 // ===============================================================
 // 💤 Lazy Loaded Components (Non-Critical Sections)
@@ -37,7 +37,6 @@ const Home: FC = () => {
   return (
     <main className="p-8 text-center">
       <Hero />
-      <GetStarted/>
       <Shop/>
       <ProductCarousel />
      

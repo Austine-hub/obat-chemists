@@ -1,21 +1,23 @@
 import { Link } from 'react-router-dom';
 import styles from './Hero.module.css';
 
+import pic1 from '../../assets/consultation.png';
+
 const Hero = () => {
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} style={{ backgroundImage: `url(${pic1})` }}>
       <div className={styles.overlay} />
       <div className={styles.container}>
         <div className={styles.content}>
-          <span className={styles.badge}>Exclusive Discounts</span>
+          <span className={styles.badge}>Health Essentials</span>
           <h1 className={styles.title}>
-            Magical Toys for Bright Futures
+            Your Trusted Pharmacy for Wellness
           </h1>
           <p className={styles.subtitle}>
-            Create Magical Moments with Our Wide Range of Engaging Toys and Adorable Clothing for Little Ones
+            Discover a wide range of prescription medications, vitamins, and healthcare products delivered safely to your door.
           </p>
           <Link to="/products/prescription" className={styles.cta}>
-            View Products
+            Shop Now
           </Link>
         </div>
       </div>
